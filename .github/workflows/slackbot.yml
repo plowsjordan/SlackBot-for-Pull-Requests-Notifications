@@ -1,21 +1,22 @@
-name: SlackBot for Pull Requests 
+name: SlackBot on Pull Request 
 
 on: 
+ branch
   push:
-    branches:
-      - master
-    pull_request["main"]
+    branches:["main"]
+  pull_request:
+    branches:["main"]
   
   jobs:
     build:
-     run-on:ubuntu-latest
-     
-  steps:
-   latest:
-     checkout:@actions/checkout@v2
-     
-   -name: Slack Notifcation 
+      runs-on: ubuntu-latest
+      steps:
+       - name: Check out Code 
+        - uses: actions/checkout@v2
+
+  -name: Slack Notification
     uses: rtCamp/action-slack-notify@master
     env:
-      SLACK_WEBHOOK_URL:${{secrets.SLACK_WEBHOOK_URL}}
-      MESSAGE: "A Pull Request was Made!!"
+    SLACK_WEBHOOK_URL:${{ secrets.SLACK_WEBHOOK_URL }}
+    SLACK_CHANNEL:${{ secrets.SLACK_CHANNEL }}
+    MESSAGE:"A new pull request has been created on the main branch"
