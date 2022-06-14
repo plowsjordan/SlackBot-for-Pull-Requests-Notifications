@@ -1,9 +1,10 @@
 name: SlackBot for Pull Requests 
 
 on: 
- branch
-  branches:
-  pull_request["main"]
+  push:
+    branches:
+      - master
+    pull_request["main"]
   
   jobs:
     build:
