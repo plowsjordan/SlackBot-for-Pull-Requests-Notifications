@@ -8,5 +8,9 @@
   "license": "MIT",
   "private": null,
   "scripts": {
-    "start": "node index.js"
+    "start": "react-scripts start",
+    "start-api": "cd api && venv/bin/flask run --no-debugger",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   }}
