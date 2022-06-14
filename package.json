@@ -6,5 +6,7 @@
   "repository": "https://github.com/plowsjordan/SlackBot-for-Pull-Requests-Notifications.git",
   "author": "Jordan Plows",
   "license": "MIT",
-  "private": null
-}
+  "private": null,
+  "scripts": {
+    "start": "node index.js"
+  }}
