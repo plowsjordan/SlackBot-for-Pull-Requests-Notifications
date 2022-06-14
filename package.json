@@ -1,0 +1,10 @@
+{
+  "name": "github-action-sb",
+  "version": "1.0.0",
+  "description": "github-action-slack-bot",
+  "main": "index.js",
+  "repository": "https://github.com/plowsjordan/SlackBot-for-Pull-Requests-Notifications.git",
+  "author": "Jordan Plows",
+  "license": "MIT",
+  "private": null
+}
